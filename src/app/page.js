@@ -37,23 +37,24 @@ const Page = () => {
         className="input"
       />
       <div className="all-container">
-        {data
-          ? data.map((blog, index) => {
-              if (blog.title.toLowerCase().includes(inputValue.toLowerCase())) {
-                return (
-                  <Blog
-                    key={index}
-                    tags={blog.tags}
-                    imgUrl={blog.social_image}
-                    title={blog.title}
-                    user={blog.user}
-                    date={blog.readable_publish_date}
-                    siteUrl={blog.url}
-                  />
-                );
-              }
-            })
-          : null}
+        {searchedDataCount == 9 ? <div>No Data</div> : null}
+        {data &&
+          data.map((blog, index) => {
+            if (blog.title.toLowerCase().includes(inputValue.toLowerCase())) {
+              return (
+                <Blog
+                  key={index}
+                  tags={blog.tags}
+                  imgUrl={blog.social_image}
+                  title={blog.title}
+                  user={blog.user}
+                  date={blog.readable_publish_date}
+                  siteUrl={blog.url}
+                />
+              );
+            } else {
+            }
+          })}
       </div>
       <div className="pageChanger">
         <button onClick={() => MinusCount()} className="pageChangerBtn">
