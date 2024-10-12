@@ -5,6 +5,21 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://img.freepik.com/free-photo/abstract-blur-pastel-beautiful-peach-pink-color-sky-warm-tone-background-design-as-bannerslid_1258-54102.jpg);
+  height: 100%;
+  width: 100vw;
+}
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVQy-V30v1Rp-BMxsnTcz_yOAhVjmKVIH9IA&s);
+  height: 100%;
 }
 .big-body {
   display: flex;
@@ -13,7 +28,8 @@ body {
   justify-content: center;
   padding: 80px;
   width: 70%;
-  border: 2px solid lightgrey;
+  border: none;
+  height: 100%;
   border-radius: 20px;
 }
 .all-container {
@@ -28,18 +44,21 @@ body {
 .blog-container {
   width: 400px;
   height: 380px;
-  border: 1px solid lightgray;
   padding: 20px;
   border-radius: 15px;
   flex-direction: column;
   display: flex;
   gap: 10px;
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://st2.depositphotos.com/4157873/6343/i/450/depositphotos_63436683-stock-photo-colorful-blurred-backgrounds-or-orange.jpg);
 }
 .img {
   width: 100%;
   height: 200px;
   border-radius: 15px;
+  border: 2px solid lightgray;
 }
 .text {
   font-size: 25px;
@@ -50,7 +69,7 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid gray;
 }
 .user-container {
   display: flex;
@@ -78,14 +97,161 @@ body {
 .pageChangerBtn {
   width: 50px;
   height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ff9b3d;
 }
 .pageChangerBtn:hover {
   cursor: pointer;
+}
+.btn {
+  background-color: inherit;
 }
 .input {
   width: 30%;
   height: 30px;
   margin-top: 50px;
   border-radius: 10px;
-  border: 1px solid lightgray;
+  background-color: #fb8e28;
+  border: none;
+}
+.input::placeholder {
+  color: black;
+}
+
+.pageAll-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://img.freepik.com/free-photo/abstract-blur-pastel-beautiful-peach-pink-color-sky-warm-tone-background-design-as-bannerslid_1258-54102.jpg);
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 20px;
+}
+.header {
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 30px;
+}
+.image {
+  width: 50%;
+  border-radius: 10px;
+  border: 20px solid white;
+}
+.user-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.userBoard {
+  position: absolute;
+  left: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  gap: 15px;
+  background-color: #d54c16;
+  border-radius: 10px;
+}
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 30px;
+  font-family: American Typewriter, serif;
+}
+.userDes {
+  color: #d58916;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 50px;
+  font-family: American Typewriter, serif;
+  font-size: 25px;
+  font-weight: 500px;
+}
+.blogDes {
+  font-family: Trebuchet MS, sans-serif;
+}
+.parent-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70px;
+  background-color: #1b0e09;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.HomeButton {
+  width: 50px;
+  height: 40px;
+  margin-left: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(https://media.dev.to/cdn-cgi/image/quality=100/https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png);
+}
+.CreatePostButton {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 60px;
+  font-family: monospace;
+  border: none;
+  background-color: #ec7c26;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.CreatePostButton:hover {
+  cursor: pointer;
+  color: #ec7c26;
+  background-color: black;
+  border: 2px solid #ec7c26;
+}
+.board {
+  position: absolute;
+  right: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: American Typewriter, serif;
+  height: 500px;
+  gap: 15px;
+  background-color: #d54c16;
+  border-radius: 10px;
+  opacity: 0.95;
+}
+.line {
+  border-bottom: 1px solid black;
+}
+.createPostBody {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://img.freepik.com/free-photo/abstract-blur-pastel-beautiful-peach-pink-color-sky-warm-tone-background-design-as-bannerslid_1258-54102.jpg);
+}
+.create-container{
+  width: 70%;
+  height: 70%;
+  border: 1px solid black;
 }

@@ -1,10 +1,14 @@
 import Link from "next/link";
 
-const Blog = ({ title, imgUrl, tags, user, date, siteUrl }) => {
+const Blog = ({ title, imgUrl, tags, user, date, id }) => {
   return (
     <div className="blog-container ">
       <img className="img" src={imgUrl} />
-      <Link href={siteUrl} className="text tag" style={{ color: "#4370CB" }}>
+      <Link
+        href={`http://localhost:3000/${id}`}
+        className="text tag"
+        style={{ color: "#4370CB" }}
+      >
         +{tags.toUpperCase()}+
       </Link>
       <div className="text">{title}</div>
