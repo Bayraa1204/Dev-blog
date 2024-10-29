@@ -1,11 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Blog = ({ title, imgUrl, tags, user, date, id }) => {
   return (
     <div className="blog-container ">
       <img className="img" src={imgUrl} />
       <Link
-        href={`http://localhost:3000/${id}`}
+        href={`https://dev-blog-three-theta.vercel.app/paths?id=${id}`}
         className="text tag"
         style={{ color: "#4370CB" }}
       >

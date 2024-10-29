@@ -1,13 +1,14 @@
 "use client";
 import Parent from "@/component/Parent";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Page = () => {
-  const blogId = usePathname();
+  const searchParams = useSearchParams();
+  const blogId = searchParams.get("id");
   const [blogData, setBlogData] = useState([]);
   const fetchBlogData = async () => {
-    const dataJson = await fetch(`https://dev.to/api/articles${blogId}`);
+    const dataJson = await fetch(`https://dev.to/api/articles/${blogId}`);
     const fetchedData = await dataJson.json();
     setBlogData(fetchedData);
   };
