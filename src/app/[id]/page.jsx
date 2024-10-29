@@ -36,7 +36,7 @@ const Page = () => {
             </div>
           )}
           <div className="board">
-            <h1 style={{ borderBottom: "2px solid black" }}>🍂Details🍂</h1>
+            <h1 style={{ borderBottom: "2px solid black" }}>?Details?</h1>
             <h2>Tags</h2>
             <div className="line">{blogData.tag_list}</div>
             <h2>Publish Date</h2>
